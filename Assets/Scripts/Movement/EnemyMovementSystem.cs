@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using Unity.Mathematics;
+using Random = UnityEngine.Random;
 
 public class EnemyMovementSystem : IExecuteSystem  
 {
@@ -18,7 +20,10 @@ public class EnemyMovementSystem : IExecuteSystem
     {
         foreach (var enemy in _enemyEntities)
         {
-            enemy.ReplacePosition(Mathf.Cos(Time.time),enemy.position.y, enemy.position.z);
+            var speed = Random.Range(GameConfig.Instance.minSpeed, GameConfig.Instance.maxSpeed);
+            var range = Random.Range(GameConfig.Instance.minRange, GameConfig.Instance.maxRange);
+            var x = Mathf.Cos(Time.time * speed) * range;
+            enemy.ReplacePosition(x,enemy.position.y, enemy.position.z);
         }
     }
 }
