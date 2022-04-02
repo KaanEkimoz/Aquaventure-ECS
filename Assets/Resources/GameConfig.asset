@@ -16,3 +16,5 @@ MonoBehaviour:
   maxRange: 7
   minSpeed: 1
   maxSpeed: 2
+  enemyPrefab: {fileID: 4915127313910653970, guid: 7095ef100af08bf4fa836aa3590fba15, type: 3}
+  playerPrefab: {fileID: 0}
