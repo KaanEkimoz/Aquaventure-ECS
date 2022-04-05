@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c714ba7f7936c554eb62e1eba6f30518, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  minRange: 2
-  maxRange: 7
-  minSpeed: 1
-  maxSpeed: 2
+  enemyRange: 0
+  enemySpeed: 0
   enemyPrefab: {fileID: 4915127313910653970, guid: 7095ef100af08bf4fa836aa3590fba15, type: 3}
-  playerPrefab: {fileID: 0}
+  playerSpeed: 10
+  playerPrefab: {fileID: 3371108951050162816, guid: 266b37df18aacef43a223fd3ee59e0e1, type: 3}

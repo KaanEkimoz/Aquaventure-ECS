@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 [CreateAssetMenu]
 public class GameConfig : ScriptableObject
 {
@@ -17,11 +19,11 @@ public class GameConfig : ScriptableObject
         }
     }
     //Enemy variables
-    public float minRange;
-    public float maxRange;
-    public float minSpeed;
-    public float maxSpeed;
-
+    public float enemyRange;
+    public float enemySpeed;
     public GameObject enemyPrefab;
-    public GameConfig playerPrefab;
+    [Space]
+    public float playerSpeed;
+    public GameObject playerPrefab;
+    
 }

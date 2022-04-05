@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _systems = new Feature ("Systems")
+            .Add(new EntitasInputSystem(Contexts.sharedInstance))
             .Add(new InitializeGameSystem(Contexts.sharedInstance))
+            .Add(new InitializeEnemySystem(Contexts.sharedInstance))
+            .Add(new InitializePlayerSystem(Contexts.sharedInstance))
             .Add(new ResourceSystem(Contexts.sharedInstance))
             .Add(new EnemyMovementSystem(Contexts.sharedInstance))
+            .Add(new PlayerMovementSystem(Contexts.sharedInstance))
             .Add(new GameEventSystems(Contexts.sharedInstance));
         _systems.Initialize();
     }
