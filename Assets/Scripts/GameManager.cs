@@ -1,6 +1,5 @@
 using Entitas;
 using UnityEngine;
-
 public class GameManager : MonoBehaviour
 {
     private Systems _systems;
@@ -14,6 +13,9 @@ public class GameManager : MonoBehaviour
             .Add(new ResourceSystem(Contexts.sharedInstance))
             .Add(new EnemyMovementSystem(Contexts.sharedInstance))
             .Add(new PlayerMovementSystem(Contexts.sharedInstance))
+            .Add(new PlayerFireSystem(Contexts.sharedInstance))
+            .Add(new PlayerFireMovementSystem(Contexts.sharedInstance))
+            .Add(new DestroySystem(Contexts.sharedInstance))
             .Add(new GameEventSystems(Contexts.sharedInstance));
         _systems.Initialize();
     }

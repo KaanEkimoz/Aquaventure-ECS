@@ -15,4 +15,9 @@ public class UnityViewObject : MonoBehaviour, IPositionListener
     {
         transform.position = new Vector3(x, y, z);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        _linkedEntity.isDestroy = true;
+    }
 }

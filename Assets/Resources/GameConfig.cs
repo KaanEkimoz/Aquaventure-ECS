@@ -25,5 +25,10 @@ public class GameConfig : ScriptableObject
     [Space]
     public float playerSpeed;
     public GameObject playerPrefab;
-    
+    [Space]
+    public float bulletSpeed;
+    public GameObject bulletPrefab;
+    [Space] 
+    public float BorderValue;
+
 }

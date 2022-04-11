@@ -11,8 +11,10 @@ public class InitializePlayerSystem : IInitializeSystem
     {
         var player = _contexts.game.CreateEntity();
         player.AddPosition(0,0,0);
-        player.isPlayer = true;
         player.AddResource(GameConfig.Instance.playerPrefab);
+        player.AddDirection(Direction.Left);
+        player.isPlayer = true;
+        
 
     }
 }

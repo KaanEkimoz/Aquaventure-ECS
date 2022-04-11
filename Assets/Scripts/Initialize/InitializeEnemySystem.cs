@@ -13,11 +13,11 @@ public class InitializeEnemySystem : IInitializeSystem
     {
         for(int i = 0; i < 10; i++)
         {
-            CreateEnemy(i);
+            CreateEnemy(i * 1.2f);
         }
     }
     
-    public void CreateEnemy(int yOffset)
+    public void CreateEnemy(float yOffset)
     {
         var enemy = _contexts.game.CreateEntity();
         enemy.AddPosition(0, yOffset, 0);
